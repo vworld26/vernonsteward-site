@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vernon Steward, Operator, Builder, Delivering Unique Growth Solutions</title>
-  <meta name="description" content="Vernon Steward is a New York based senior operator and CEO of Prota Studios. 25 years building businesses, digital products, and revenue lines from zero." />
+  <meta name="description" content="Vernon Steward is a New York based operator and builder, founder of V. Steward Group and CEO of Prota Studios. 25 years building businesses, digital products, and revenue lines from zero." />
 
   <!-- search engine signals -->
   <link rel="canonical" href="https://vernonsteward.com/" />
@@ -44,13 +44,20 @@
     "name": "Vernon Steward",
     "url": "https://vernonsteward.com",
     "image": "https://vernonsteward.com/images/vernon.jpg",
-    "email": "vsteward@gmail.com",
+    "email": "vernon@vstewardgroup.com",
     "jobTitle": "CEO",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Prota Studios",
-      "url": "https://protastudios.com"
-    },
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "V. Steward Group",
+        "url": "https://vstewardgroup.com"
+      },
+      {
+        "@type": "Organization",
+        "name": "Prota Studios",
+        "url": "https://protastudios.com"
+      }
+    ],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "New York",
@@ -74,7 +81,7 @@
       "Go-to-market strategy"
     ],
     "knowsLanguage": ["English", "Italian", "Afrikaans", "French"],
-    "description": "Vernon Steward is a New York based senior operator and CEO of Prota Studios. 25 years building businesses, digital products, and revenue lines from zero."
+    "description": "Vernon Steward is a New York based operator and builder, founder of V. Steward Group and CEO of Prota Studios. 25 years building businesses, digital products, and revenue lines from zero."
   }
   </script>
 
@@ -214,6 +221,8 @@
       border-radius: 6px;
       border-top: 3px solid var(--accent);
     }
+    a.service { display: block; color: inherit; border-bottom: 0; transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
+    a.service:hover { border-color: var(--accent); box-shadow: 0 10px 26px rgba(139, 58, 58, 0.12); transform: translateY(-2px); }
     .service h3 {
       margin-bottom: 0.75rem;
       color: var(--ink);
@@ -276,17 +285,7 @@
       margin: 0;
     }
 
-    /* ---------------------------------------------------------
-       CONTACT
-       --------------------------------------------------------- */
-    .contact dl {
-      display: grid;
-      grid-template-columns: 110px 1fr;
-      gap: 0.35rem 1.5rem;
-      margin: 0;
-    }
-    .contact dt { color: var(--muted); font-size: 0.92rem; padding-top: 0.1rem; }
-    .contact dd { margin: 0; }
+    .book-alt { margin: 1rem 0 0; color: var(--muted); font-size: 0.95rem; }
 
     /* ---------------------------------------------------------
        FOOTER
@@ -299,6 +298,13 @@
       font-size: 0.85rem;
       border-top: 1px solid var(--rule);
     }
+    .footer-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; }
+    .footer-copy { margin: 0; }
+    .footer-links { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; font-size: 0.9rem; }
+    .footer-icons { display: inline-flex; align-items: center; gap: 1rem; margin-left: 0.5rem; }
+    .footer-icons a { display: inline-flex; line-height: 0; border-bottom: 0; }
+    .footer-icons svg { width: 20px; height: 20px; }
+    .footer-icons .icon-x { width: 18px; height: 18px; }
 
     /* ---------------------------------------------------------
        MOBILE: collapse all multi-column layouts to single column.
@@ -328,11 +334,6 @@
 
       .project-grid { grid-template-columns: 1fr; }
 
-      .contact dl {
-        grid-template-columns: 1fr;
-        gap: 0.25rem 0;
-      }
-      .contact dt { margin-top: 0.75rem; }
     }
   </style>
 </head>
@@ -343,7 +344,7 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero-photo">
-        <img src="images/vernon.jpg" alt="Vernon Steward, CEO of Prota Studios, New York" />
+        <img src="images/vernon.jpg" alt="Vernon Steward, founder of V. Steward Group and CEO of Prota Studios, New York" />
       </div>
       <div class="hero-text">
         <div class="eyebrow">Vernon Steward · New York</div>
@@ -370,6 +371,9 @@
         brief is half a page and the answer is somewhere out in the world.
         I run lean experiments, design operating models, and ship things
         alongside founders, product teams, and Fortune 500 executives.
+        I run <a href="https://vstewardgroup.com">V. Steward Group</a> and
+        <a href="https://protastudios.com">Prota Studios</a>, delivering
+        AI-driven product development and marketing.
       </p>
       <p>
         Outside work I cook whatever is in the fridge, follow the
@@ -383,26 +387,16 @@
       <h2>What I Do</h2>
       <div class="service-grid">
 
-        <article class="service">
+        <a class="service" href="https://vstewardgroup.com/services#validation">
           <h3>Validation</h3>
           <p>
             Get the right market signals to make your next product and
             business decision informed and based on real customer data.
             Research, experiments, demand tests, AI-enabled workflows.
           </p>
-        </article>
+        </a>
 
-        <article class="service">
-          <h3>Growth Marketing</h3>
-          <p>
-            Set up your multichannel marketing stack, or audit and optimize
-            what you are running. Connect the data from the top of funnel
-            ads to your backend CRM. Search, Social, S/GEO, Analytics,
-            Content, Email.
-          </p>
-        </article>
-
-        <article class="service">
+        <a class="service" href="https://vstewardgroup.com/services#product-development">
           <h3>Product Development</h3>
           <p>
             Design, test, and develop new digital products at AI speed,
@@ -410,7 +404,17 @@
             code, all with built in experiment loops and conversion
             optimization.
           </p>
-        </article>
+        </a>
+
+        <a class="service" href="https://vstewardgroup.com/services#growth-marketing">
+          <h3>Growth Marketing</h3>
+          <p>
+            Set up your multichannel marketing stack, or audit and optimize
+            what you are running. Connect the data from the top of funnel
+            ads to your backend CRM. Search, Social, S/GEO, Analytics,
+            Content, Email.
+          </p>
+        </a>
 
       </div>
     </section>
@@ -463,32 +467,27 @@
     <section class="book">
       <h2>Book a Call</h2>
       <!-- Google Calendar Appointment Scheduling begin -->
-      <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1YUzW9eYMl-aNNRjy6_NIfWuQLXu8qXFaIAcBFL_jU5NcPa9U6aX-K3BfahUYtJxSGqQ4GppU0?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+      <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0HVi8PXoaQ9MXW6kNFsZYlNdBL65cLCZVc1fKQe_9nKmX-Q6oHcRypAOkTrs2fwDigNzoJbuYl?gv=true" style="border: 0" width="100%" height="600" frameborder="0" title="Book a call with Vernon Steward"></iframe>
       <!-- end Google Calendar Appointment Scheduling -->
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact">
-      <h2>Contact</h2>
-      <dl>
-        <dt>Email</dt>
-        <dd><a href="mailto:vsteward@gmail.com">vsteward@gmail.com</a></dd>
-
-        <dt>LinkedIn</dt>
-        <dd><a href="https://www.linkedin.com/in/vsteward/" target="_blank" rel="noopener">linkedin.com/in/vsteward</a></dd>
-
-        <dt>Telegram</dt>
-        <dd><a href="https://t.me/vworld26" target="_blank" rel="noopener">@vworld26</a></dd>
-
-        <dt>X</dt>
-        <dd><a href="https://x.com/vsteward" target="_blank" rel="noopener">@vsteward</a></dd>
-      </dl>
+      <p class="book-alt">Or send your idea first: <a href="https://vstewardgroup.com/products/venture-evaluation#intake">start a free venture evaluation &rarr;</a></p>
     </section>
 
   </main>
 
   <footer>
-    © Vernon Steward
+    <div class="footer-row">
+      <p class="footer-copy">&copy; 2026 Vernon Steward</p>
+      <div class="footer-links">
+        <a href="https://vstewardgroup.com">V. Steward Group</a>
+        <a href="https://protastudios.com">Prota Studios</a>
+        <span class="footer-icons">
+          <a href="mailto:vernon@vstewardgroup.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+          <a href="https://www.linkedin.com/in/vsteward/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.4 2.6 4.4 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V21h-4z"/></svg></a>
+          <a href="https://t.me/vworld26" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3L2.7 11.7c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 11.4-7.2c.5-.3 1-.1.6.2l-9.2 8.3-.3 5c.5 0 .7-.2 1-.5l2.4-2.3 5 3.7c.9.5 1.6.2 1.8-.9l3.3-15.5c.3-1.3-.5-1.9-1.5-1.3z"/></svg></a>
+          <a href="https://x.com/vsteward" target="_blank" rel="noopener" aria-label="X" title="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-x"><path d="M18.2 2h3.4l-7.4 8.5L23 22h-6.8l-5.3-7-6.1 7H1.4l7.9-9.1L1 2h7l4.8 6.4L18.2 2zm-1.2 18h1.9L7.1 3.9H5.1L17 20z"/></svg></a>
+        </span>
+      </div>
+    </div>
   </footer>
 
 </body>

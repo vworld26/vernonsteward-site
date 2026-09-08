@@ -1,6 +1,6 @@
 # vernonsteward.com
 
-Personal website for Vernon Steward — operator, builder, CEO of Prota Studios.
+Personal website for Vernon Steward: operator, builder, founder of V. Steward Group, CEO of Prota Studios.
 
 ## Stack
 
