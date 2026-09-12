@@ -250,6 +250,15 @@
       display: flex;
       flex-direction: column;
     }
+    a.project { color: inherit; border-bottom: 0; transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
+    a.project:hover { border-color: var(--accent); box-shadow: 0 10px 26px rgba(139, 58, 58, 0.12); transform: translateY(-2px); }
+    a.project:hover h3 { color: var(--accent); }
+    .project-more {
+      margin-top: auto;
+      padding-top: 0.85rem;
+      font-size: 0.85rem;
+      color: var(--accent);
+    }
     .project-logo {
       height: 72px;
       display: flex;
@@ -424,41 +433,47 @@
       <h2>Select Projects</h2>
       <div class="project-grid">
 
-        <article class="project">
+        <a class="project" href="https://www.protastudios.com/projects/citi-ventures">
           <div class="project-logo"><img src="images/01-Citi-Logotype.svg" alt="Citi" /></div>
           <h3>Citi Ventures</h3>
           <p>Innovation partner for 9 years delivering 100+ product experiments and demand tests, developing new products and capabilities.</p>
-        </article>
+          <p class="project-more">Read the case study &rarr;</p>
+        </a>
 
-        <article class="project">
+        <a class="project" href="https://www.protastudios.com/projects/wire-network-incubator">
           <div class="project-logo"><img src="images/18-Wire-Logotype.svg" alt="Wire Network" /></div>
           <h3>Wire Network</h3>
           <p>Led a 12-week incubator program for an emerging blockchain, including content, communication, community, and demo day.</p>
-        </article>
+          <p class="project-more">Read the case study &rarr;</p>
+        </a>
 
-        <article class="project">
+        <a class="project" href="https://www.protastudios.com/projects/audubon">
           <div class="project-logo"><img src="images/08-Audubon-Logotype.svg" alt="Audubon" /></div>
           <h3>Audubon</h3>
           <p>Created a high fidelity interactive prototype to visualize complex bird migration data, showcasing  geospatial mapping, education / environment content.</p>
-        </article>
+          <p class="project-more">Read the case study &rarr;</p>
+        </a>
 
-        <article class="project">
+        <a class="project" href="https://www.protastudios.com/projects/provuu">
           <div class="project-logo"><img src="images/17-Provuu-Logotype.svg" alt="Provuu" /></div>
           <h3>Provuu</h3>
           <p>Launched a time-constrained Kickstarter campaign for an AR snow goggle startup: 650% of goal, most successful category campaign ever.</p>
-        </article>
+          <p class="project-more">Read the case study &rarr;</p>
+        </a>
 
-        <article class="project">
+        <a class="project" href="https://www.protastudios.com/projects/clorox-catpal">
           <div class="project-logo"><img src="images/02-Clorox-Logotype.svg" alt="Clorox" /></div>
           <h3>Clorox</h3>
           <p>Developed product innovations, ecommerce MVPs, and demand tests for brands including Glad, Kingsford, and Fresh Step.</p>
-        </article>
+          <p class="project-more">Read the case study &rarr;</p>
+        </a>
 
-        <article class="project">
+        <a class="project" href="https://www.protastudios.com/projects/visa">
           <div class="project-logo"><img src="images/12-Visa-Logotype.svg" alt="Visa" /></div>
           <h3>Visa</h3>
           <p>Ran an international new-product validation test comparing consumer product demand across the US and Asia.</p>
-        </article>
+          <p class="project-more">Read the case study &rarr;</p>
+        </a>
 
       </div>
     </section>
