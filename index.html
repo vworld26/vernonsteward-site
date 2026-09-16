@@ -307,7 +307,6 @@
       object-fit: contain;
     }
     .logo-icon {
-      width: 140px;
       max-width: 88%;
       height: 44px;
       background-color: #b3b3b3;
@@ -320,6 +319,20 @@
       transition: background-color 0.15s ease;
     }
     a.project:hover .logo-icon { background-color: var(--accent); }
+    /* Each logo file has its own aspect ratio; a single fixed box made the
+       wide, flat wordmarks (Wire, Clorox) render much smaller than the
+       squarer marks (Citi, Audubon, Visa). Give each its own width so they
+       all read at a consistent visual size instead of a uniform box. */
+    /* Citi and Audubon each carry a small mark stacked above the wordmark,
+       so centering the whole graphic's bounding box leaves the actual word
+       sitting lower than the text-only marks (Wire, Provuu, Clorox, Visa).
+       Nudge those two up so the words share one line. */
+    .logo-icon--citi { width: 76px; height: 44px; transform: translateY(-7.5px); }
+    .logo-icon--wire { width: 220px; height: 26px; }
+    .logo-icon--audubon { width: 144px; height: 44px; transform: translateY(-9.5px); }
+    .logo-icon--provuu { width: 168px; height: 27px; }
+    .logo-icon--clorox { width: 220px; height: 26px; }
+    .logo-icon--visa { width: 96px; height: 31px; }
     .logo-mark {
       font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
       font-weight: 600;
@@ -534,42 +547,42 @@
       <div class="project-grid">
 
         <a class="project" href="https://www.protastudios.com/projects/citi-ventures" target="_blank" rel="noopener">
-          <div class="project-logo"><span class="logo-icon" style="-webkit-mask-image:url('images/01-Citi-Logotype.svg'); mask-image:url('images/01-Citi-Logotype.svg');" role="img" aria-label="Citi"></span></div>
+          <div class="project-logo"><span class="logo-icon logo-icon--citi" style="-webkit-mask-image:url('images/01-Citi-Logotype.svg'); mask-image:url('images/01-Citi-Logotype.svg');" role="img" aria-label="Citi"></span></div>
           <h3>Citi Ventures</h3>
           <p>Innovation partner for 9 years delivering 100+ product experiments and demand tests, developing new products and capabilities.</p>
           <p class="project-more">Read the case study &rarr;</p>
         </a>
 
         <a class="project" href="https://www.protastudios.com/projects/wire-network-incubator" target="_blank" rel="noopener">
-          <div class="project-logo"><span class="logo-icon" style="-webkit-mask-image:url('images/18-Wire-Logotype.svg'); mask-image:url('images/18-Wire-Logotype.svg');" role="img" aria-label="Wire Network"></span></div>
+          <div class="project-logo"><span class="logo-icon logo-icon--wire" style="-webkit-mask-image:url('images/18-Wire-Logotype.svg'); mask-image:url('images/18-Wire-Logotype.svg');" role="img" aria-label="Wire Network"></span></div>
           <h3>Wire Network</h3>
           <p>Led a 12-week incubator program for an emerging blockchain, including content, communication, community, and demo day.</p>
           <p class="project-more">Read the case study &rarr;</p>
         </a>
 
         <a class="project" href="https://www.protastudios.com/projects/audubon" target="_blank" rel="noopener">
-          <div class="project-logo"><span class="logo-icon" style="-webkit-mask-image:url('images/08-Audubon-Logotype.svg'); mask-image:url('images/08-Audubon-Logotype.svg');" role="img" aria-label="Audubon"></span></div>
+          <div class="project-logo"><span class="logo-icon logo-icon--audubon" style="-webkit-mask-image:url('images/08-Audubon-Logotype.svg'); mask-image:url('images/08-Audubon-Logotype.svg');" role="img" aria-label="Audubon"></span></div>
           <h3>Audubon</h3>
           <p>Created a high fidelity interactive prototype to visualize complex bird migration data, showcasing  geospatial mapping, education / environment content.</p>
           <p class="project-more">Read the case study &rarr;</p>
         </a>
 
         <a class="project" href="https://www.protastudios.com/projects/provuu" target="_blank" rel="noopener">
-          <div class="project-logo"><span class="logo-icon" style="-webkit-mask-image:url('images/17-Provuu-Logotype.svg'); mask-image:url('images/17-Provuu-Logotype.svg');" role="img" aria-label="Provuu"></span></div>
+          <div class="project-logo"><span class="logo-icon logo-icon--provuu" style="-webkit-mask-image:url('images/17-Provuu-Logotype.svg'); mask-image:url('images/17-Provuu-Logotype.svg');" role="img" aria-label="Provuu"></span></div>
           <h3>Provuu</h3>
           <p>Launched a time-constrained Kickstarter campaign for an AR snow goggle startup: 650% of goal, most successful category campaign ever.</p>
           <p class="project-more">Read the case study &rarr;</p>
         </a>
 
         <a class="project" href="https://www.protastudios.com/projects/clorox-catpal" target="_blank" rel="noopener">
-          <div class="project-logo"><span class="logo-icon" style="-webkit-mask-image:url('images/02-Clorox-Logotype.svg'); mask-image:url('images/02-Clorox-Logotype.svg');" role="img" aria-label="Clorox"></span></div>
+          <div class="project-logo"><span class="logo-icon logo-icon--clorox" style="-webkit-mask-image:url('images/02-Clorox-Logotype.svg'); mask-image:url('images/02-Clorox-Logotype.svg');" role="img" aria-label="Clorox"></span></div>
           <h3>Clorox</h3>
           <p>Developed product innovations, ecommerce MVPs, and demand tests for brands including Glad, Kingsford, and Fresh Step (CatPal).</p>
           <p class="project-more">Read the case study &rarr;</p>
         </a>
 
         <a class="project" href="https://www.protastudios.com/projects/visa" target="_blank" rel="noopener">
-          <div class="project-logo"><span class="logo-icon" style="-webkit-mask-image:url('images/12-Visa-Logotype.svg'); mask-image:url('images/12-Visa-Logotype.svg');" role="img" aria-label="Visa"></span></div>
+          <div class="project-logo"><span class="logo-icon logo-icon--visa" style="-webkit-mask-image:url('images/12-Visa-Logotype.svg'); mask-image:url('images/12-Visa-Logotype.svg');" role="img" aria-label="Visa"></span></div>
           <h3>Visa</h3>
           <p>Ran an international new-product validation test comparing consumer product demand across the US and Asia.</p>
           <p class="project-more">Read the case study &rarr;</p>
