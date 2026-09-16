@@ -103,6 +103,7 @@
       --muted: #6b6b6b;
       --rule: #d9d4c8;
       --accent: #8b3a3a;
+      --accent-soft: #f5eaea;
       --measure: 980px;       /* max content width, unified for every section */
     }
 
@@ -231,6 +232,24 @@
     a.service { display: block; color: inherit; border-bottom: 0; transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
     a.service:hover { border-color: var(--accent); box-shadow: 0 10px 26px rgba(139, 58, 58, 0.12); transform: translateY(-2px); }
     a.service:hover h3 { color: var(--accent); }
+    a.service:hover .service-visual .service-icon { opacity: 0.95; }
+    .service-visual {
+      height: 120px;
+      margin: -2rem -1.5rem 1.25rem;
+      border-radius: 5px 5px 0 0;
+      background: var(--accent-soft);
+      overflow: hidden;
+      position: relative;
+    }
+    .service-icon {
+      position: absolute;
+      color: var(--accent);
+      display: block;
+      transition: opacity 0.15s ease;
+    }
+    .service-visual--checklist .service-icon { width: 56%; left: 10%; top: 9%; opacity: 0.8; }
+    .service-visual--wireframe .service-icon { width: 54%; left: 23%; top: 7%; opacity: 0.8; }
+    .service-visual--funnel .service-icon { width: 56%; left: 22%; top: 9%; opacity: 0.75; }
     .service h3 {
       margin-bottom: 0.75rem;
       color: var(--ink);
@@ -287,6 +306,20 @@
       width: auto;
       object-fit: contain;
     }
+    .logo-icon {
+      width: 140px;
+      max-width: 88%;
+      height: 44px;
+      background-color: #b3b3b3;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      transition: background-color 0.15s ease;
+    }
+    a.project:hover .logo-icon { background-color: var(--accent); }
     .logo-mark {
       font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
       font-weight: 600;
@@ -415,6 +448,33 @@
       <div class="service-grid">
 
         <a class="service" href="https://vstewardgroup.com/services#validation" target="_blank" rel="noopener">
+          <div class="service-visual service-visual--checklist">
+            <svg class="service-icon" viewBox="0 0 200 120" aria-hidden="true" focusable="false">
+              <g transform="translate(0 0)">
+                <circle cx="10" cy="10" r="8" fill="currentColor" stroke="currentColor" stroke-width="1.5" opacity="0.9"/>
+                <path d="M6.5 10.2l2.4 2.4 4.8-5" fill="none" stroke="var(--accent-soft)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="28" y="6" width="120" height="8" rx="4" fill="currentColor" opacity="0.55"/>
+              </g>
+              <g transform="translate(0 24)">
+                <circle cx="10" cy="10" r="8" fill="currentColor" stroke="currentColor" stroke-width="1.5" opacity="0.9"/>
+                <path d="M6.5 10.2l2.4 2.4 4.8-5" fill="none" stroke="var(--accent-soft)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="28" y="6" width="88" height="8" rx="4" fill="currentColor" opacity="0.55"/>
+              </g>
+              <g transform="translate(0 48)">
+                <circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                <rect x="28" y="6" width="104" height="8" rx="4" fill="currentColor" opacity="0.28"/>
+              </g>
+              <g transform="translate(0 72)">
+                <circle cx="10" cy="10" r="8" fill="currentColor" stroke="currentColor" stroke-width="1.5" opacity="0.9"/>
+                <path d="M6.5 10.2l2.4 2.4 4.8-5" fill="none" stroke="var(--accent-soft)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="28" y="6" width="72" height="8" rx="4" fill="currentColor" opacity="0.55"/>
+              </g>
+              <g transform="translate(0 96)">
+                <circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                <rect x="28" y="6" width="96" height="8" rx="4" fill="currentColor" opacity="0.28"/>
+              </g>
+            </svg>
+          </div>
           <h3>Validation</h3>
           <p>
             Get the right market signals to make your next product and
@@ -424,6 +484,19 @@
         </a>
 
         <a class="service" href="https://vstewardgroup.com/services#product-development" target="_blank" rel="noopener">
+          <div class="service-visual service-visual--wireframe">
+            <svg class="service-icon" viewBox="0 0 200 130" aria-hidden="true" focusable="false">
+              <rect x="1" y="1" width="198" height="128" rx="8" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+              <rect x="1" y="1" width="198" height="18" rx="8" fill="currentColor" opacity="0.18"/>
+              <circle cx="12" cy="10" r="3" fill="currentColor" opacity="0.6"/>
+              <rect x="14" y="32" width="92" height="10" rx="5" fill="currentColor" opacity="0.7"/>
+              <rect x="14" y="50" width="70" height="6" rx="3" fill="currentColor" opacity="0.35"/>
+              <rect x="14" y="62" width="80" height="6" rx="3" fill="currentColor" opacity="0.35"/>
+              <rect x="14" y="84" width="48" height="16" rx="4" fill="currentColor" opacity="0.85"/>
+              <rect x="120" y="32" width="66" height="68" rx="6" fill="currentColor" opacity="0.22"/>
+              <rect x="14" y="110" width="172" height="6" rx="3" fill="currentColor" opacity="0.2"/>
+            </svg>
+          </div>
           <h3>Product Development</h3>
           <p>
             Design, test, and develop new digital products at AI speed,
@@ -434,6 +507,15 @@
         </a>
 
         <a class="service" href="https://vstewardgroup.com/services#growth-marketing" target="_blank" rel="noopener">
+          <div class="service-visual service-visual--funnel">
+            <svg class="service-icon" viewBox="0 0 200 120" aria-hidden="true" focusable="false">
+              <rect x="0" y="0" width="200" height="16" rx="8" fill="currentColor" opacity="0.25"/>
+              <rect x="18" y="24" width="164" height="16" rx="8" fill="currentColor" opacity="0.41"/>
+              <rect x="36" y="48" width="128" height="16" rx="8" fill="currentColor" opacity="0.57"/>
+              <rect x="52" y="72" width="96" height="16" rx="8" fill="currentColor" opacity="0.73"/>
+              <rect x="68" y="96" width="64" height="16" rx="8" fill="currentColor" opacity="0.89"/>
+            </svg>
+          </div>
           <h3>Growth Marketing</h3>
           <p>
             Set up your multichannel marketing stack, or audit and optimize
@@ -452,42 +534,42 @@
       <div class="project-grid">
 
         <a class="project" href="https://www.protastudios.com/projects/citi-ventures" target="_blank" rel="noopener">
-          <div class="project-logo"><img src="images/01-Citi-Logotype.svg" alt="Citi" /></div>
+          <div class="project-logo"><span class="logo-icon" style="-webkit-mask-image:url('images/01-Citi-Logotype.svg'); mask-image:url('images/01-Citi-Logotype.svg');" role="img" aria-label="Citi"></span></div>
           <h3>Citi Ventures</h3>
           <p>Innovation partner for 9 years delivering 100+ product experiments and demand tests, developing new products and capabilities.</p>
           <p class="project-more">Read the case study &rarr;</p>
         </a>
 
         <a class="project" href="https://www.protastudios.com/projects/wire-network-incubator" target="_blank" rel="noopener">
-          <div class="project-logo"><img src="images/18-Wire-Logotype.svg" alt="Wire Network" /></div>
+          <div class="project-logo"><span class="logo-icon" style="-webkit-mask-image:url('images/18-Wire-Logotype.svg'); mask-image:url('images/18-Wire-Logotype.svg');" role="img" aria-label="Wire Network"></span></div>
           <h3>Wire Network</h3>
           <p>Led a 12-week incubator program for an emerging blockchain, including content, communication, community, and demo day.</p>
           <p class="project-more">Read the case study &rarr;</p>
         </a>
 
         <a class="project" href="https://www.protastudios.com/projects/audubon" target="_blank" rel="noopener">
-          <div class="project-logo"><img src="images/08-Audubon-Logotype.svg" alt="Audubon" /></div>
+          <div class="project-logo"><span class="logo-icon" style="-webkit-mask-image:url('images/08-Audubon-Logotype.svg'); mask-image:url('images/08-Audubon-Logotype.svg');" role="img" aria-label="Audubon"></span></div>
           <h3>Audubon</h3>
           <p>Created a high fidelity interactive prototype to visualize complex bird migration data, showcasing  geospatial mapping, education / environment content.</p>
           <p class="project-more">Read the case study &rarr;</p>
         </a>
 
         <a class="project" href="https://www.protastudios.com/projects/provuu" target="_blank" rel="noopener">
-          <div class="project-logo"><img src="images/17-Provuu-Logotype.svg" alt="Provuu" /></div>
+          <div class="project-logo"><span class="logo-icon" style="-webkit-mask-image:url('images/17-Provuu-Logotype.svg'); mask-image:url('images/17-Provuu-Logotype.svg');" role="img" aria-label="Provuu"></span></div>
           <h3>Provuu</h3>
           <p>Launched a time-constrained Kickstarter campaign for an AR snow goggle startup: 650% of goal, most successful category campaign ever.</p>
           <p class="project-more">Read the case study &rarr;</p>
         </a>
 
         <a class="project" href="https://www.protastudios.com/projects/clorox-catpal" target="_blank" rel="noopener">
-          <div class="project-logo"><img src="images/02-Clorox-Logotype.svg" alt="Clorox" /></div>
+          <div class="project-logo"><span class="logo-icon" style="-webkit-mask-image:url('images/02-Clorox-Logotype.svg'); mask-image:url('images/02-Clorox-Logotype.svg');" role="img" aria-label="Clorox"></span></div>
           <h3>Clorox</h3>
           <p>Developed product innovations, ecommerce MVPs, and demand tests for brands including Glad, Kingsford, and Fresh Step (CatPal).</p>
           <p class="project-more">Read the case study &rarr;</p>
         </a>
 
         <a class="project" href="https://www.protastudios.com/projects/visa" target="_blank" rel="noopener">
-          <div class="project-logo"><img src="images/12-Visa-Logotype.svg" alt="Visa" /></div>
+          <div class="project-logo"><span class="logo-icon" style="-webkit-mask-image:url('images/12-Visa-Logotype.svg'); mask-image:url('images/12-Visa-Logotype.svg');" role="img" aria-label="Visa"></span></div>
           <h3>Visa</h3>
           <p>Ran an international new-product validation test comparing consumer product demand across the US and Asia.</p>
           <p class="project-more">Read the case study &rarr;</p>
